@@ -1,5 +1,26 @@
-const dropdows = document.querySelectorAll(".dropdown");
+const navlinks = document.querySelectorAll(".nav-link");
+const hamburger = document.querySelector(".hamburger");
+const body = document.querySelector("body");
 
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active');
+    body.classList.toggle('active');
+})
+
+navlinks.forEach(navlink => {
+    const dropdownList = navlink.querySelector(".dropdown-list");
+    const dropdown = navlink.querySelector(".dropdown");
+
+    if(dropdown){
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('link-open');
+            dropdownList.classList.toggle('open');
+        })
+    }
+})
+
+
+/*
 dropdows.forEach(dropdown => {
     const select = dropdown.querySelector(".select");
     const menu = dropdown.querySelector(".submenu-wrap");
@@ -22,3 +43,6 @@ dropdows.forEach(dropdown => {
     })
 
 });
+
+*/
+
