@@ -223,6 +223,9 @@ main .text-content button:hover {
   color: var(--black);
   background: transparent;
 }
+main .text-content button:active {
+  transform: scale(1.2);
+}
 main .text-content .clients {
   display: flex;
   align-items: center;
@@ -288,6 +291,9 @@ main .text-content .clients img {
   nav .nav-link:hover a {
     color: var(--black);
     background: transparent;
+  }
+  nav .nav-link:hover a:active {
+    transform: scale(1.2);
   }
   nav .nav-link .dropdown-list {
     position: absolute;

@@ -263,6 +263,11 @@ main {
             &:hover{
                 color: var(--black);
                 background: transparent;
+
+            }
+
+            &:active{
+                transform: scale(1.2);
             }
         }
 
@@ -355,6 +360,10 @@ main {
                 a{
                     color: var(--black);
                     background: transparent;
+                }
+
+                a:active{
+                    transform: scale(1.2);
                 }
                 
             }
