@@ -25,7 +25,6 @@ ul {
 img,
 svg {
   display: inline-block;
-  max-width: 100%;
 }
 
 body {
@@ -277,8 +276,67 @@ main .text-content .clients img {
   nav .nav-link {
     text-align: right;
     margin: 0 1rem;
+    position: relative;
+    transition: 0.5s all linear;
+  }
+  nav .nav-link a {
+    padding: 0;
+  }
+  nav .nav-link:hover {
+    transform: translateY(-1px);
+  }
+  nav .nav-link:hover a {
+    color: var(--black);
+    background: transparent;
+  }
+  nav .nav-link .dropdown-list {
+    position: absolute;
+    background: white;
+    right: -2rem;
+    top: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 3rem hsla(0, 0%, 41%, 0.6);
+  }
+  nav .nav-link .dropdown-list .dropdown-link {
+    width: auto;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0;
   }
   nav .authentication {
     flex-direction: row;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 6rem;
+    margin-bottom: 2.5rem;
+  }
+  main > * {
+    height: auto;
+    margin: 0 2rem;
+  }
+  main picture {
+    order: 2;
+  }
+  main picture img {
+    max-height: 100%;
+  }
+  main .text-content {
+    order: 1;
+    text-align: left;
+  }
+  main .text-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+  }
+  main .text-content > *, main .text-content button, main .text-content .clients {
+    margin-top: 4rem;
+  }
+  main .text-content .clients {
+    align-self: baseline;
+  }
+  main .text-content .clients img {
+    max-width: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
